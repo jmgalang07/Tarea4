@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+:root {
+  --color-text-orange: rgba(212, 220, 255, 0.185);
+  --color-text-black: black;
+  --color-text-white: white;
+  --color-text-red: #e03150;
+  --width-container: 800px;
+  --height-container: 80%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--width-container);
+  height: var(--height-container);
+  background-color: var(--color-text-orange);
+  border: 3px solid var(--color-text-red);
+  border-radius: 12px;
+  box-shadow: 5px 5px 100px var(--color-text-red);
+}
+.part-1 {
+  width: 30%;
+  height: 90%;
+  border: 2px dotted var(--color-text-red);
+  margin: 20px;
+}
+.part-2 {
+  width: 70%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.t-shirt {
+  width: 500px;
+  height: 500px;
+  border: none;
+  background: none;
+  position: relative;
+  filter: drop-shadow(4px 4px 10px var(--color-text-black));
+}
+.name-on-shirt {
+  position: absolute;
+  top: 32%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: var(--color-text-white);
+  font-weight: bold;
+  font-size: 20px;
+}
+.tittle {
+  height: 10%;
+  margin: 20px;
+}
+.black-white {
+  height: 10%;
+  margin: 12px;
+}
+input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: 8px;
+  border-bottom: 3px solid var(--color-text-black);
+}
+img {
+  width: 70px;
+  height: 80px;
+  background: var(--color-text-white);
+  border: 2px solid var(--color-text-black);
+  cursor: grab;
+}
+.image {
+  margin: 12px;
+  overflow-y: auto;
+  gap: 20px;
+  height: 103%;
+}
+.images {
+  height: 48%;
+  margin-left: 12px;
+}
+label {
+  color: white;
+}
+p {
+  text-align: left;
+  color: white;
+}
+.range {
+  height: 10%;
+  margin: 20px;
+  position: relative;
+}
+h2 {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 1px 1.8px var(--color-text-white);
+  color: white;
+}
+#range1,
+#range2 {
+  position: relative;
+  width: 90%;
+  margin: -10px;
+}
+.dropped-image {
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 160px;
+  pointer-events: none;
+  background: none;
+  border: none;
+}
+.dropped-image.small {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+.name-on-image {
+  position: absolute;
+  top: 78%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: fit-content;
+    box-shadow: none;
+    flex-direction: column;
+    border: none;
+  }
+  .part-1 {
+    width: 100%;
+    height: 60%;
+    border: none;
+  }
+  .part-2 {
+    height: 40%;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .tittle {
+    height: 6%;
+    width: 90%;
+  }
+  .range {
+    height: 6%;
+    width: 90%;
+  }
+  .black-white {
+    height: 10%;
+    width: 30%;
+    display: flex;
+    gap: 10px;
+  }
+  input {
+    width: 90%;
+    height: 8px;
+  }
+  .inputRange {
+    margin-top: -16px;
+  }
+  .image {
+    overflow-y: auto;
+    width: 76%;
+    border-bottom: 2px solid #e03150;
+  }
+  .images {
+    width: 90%;
+    height: 136px;
+    gap: 10px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .t-shirt {
+    height: 264px;
+    width: 282px;
+    border: none;
+    background: none;
+    position: relative;
+    filter: drop-shadow(4px 4px 10px var(--color-text-black));
+  }
+  input[type="radio"] {
+    transform: scale(1.5);
+  }
+  p {
+    text-align: left;
+  }
+  .dropper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .dropped-image {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 100px;
+    pointer-events: none;
+    background: none;
+    border: none;
+  }
+  .dropped-image.small {
+    top: 34%;
+    left: 58%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%) scaleX(-1);
+  }
+  .name-on-image {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .name-on-shirt {
+    position: absolute;
+    top: 34%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: var(--color-text-white);
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/* Google Fonts Font -> PT Serif */
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <script src="./src/js/script.js" defer></script>
+    <title>Task 4</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="part-1">
+            <div class="tittle">
+                <label class="name">Tittle <br />
+                    <input type="text" id="userName" maxlength="10" />
+                </label>
+            </div>
+
+            <div class="range">
+                <input class="inputRange" type="range" id="range1" name="satisfaction" min="0" max="10" step="1"
+                    value="0"><br>
+                <input class="inputRange" type="range" id="range2" name="satisfaction" min="0" max="10" step="1"
+                    value="0"><br>
+            </div>
+            <div class="black-white">
+                <input type="radio" id="black" name="tshirt-color" value="black" checked>
+                <label for="black">Black</label> <br>
+                <input type="radio" id="white" name="tshirt-color" value="white">
+                <label for="white">White</label>
+            </div>
+
+            <div class="images" id="images-container">
+                <p>Images (drag to t-shirt):</p>
+                <div class="image">
+                    <img src="./src/images/chamber.png" alt="chamber" draggable="true">
+                    <img src="./src/images/cipher.png" alt="cipher" draggable="true">
+                    <img src="./src/images/jett.png" alt="jett" draggable="true">
+                    <img src="./src/images/killjoy.png" alt="killjoy" draggable="true">
+                    <img src="./src/images/phoenix.png" alt="phoenix" draggable="true">
+                    <img src="./src/images/raze.png" alt="raze" draggable="true">
+                    <img src="./src/images/reyna.png" alt="reyna" draggable="true">
+                    <img src="./src/images/sage.png" alt="sage" draggable="true">
+                    <img src="./src/images/skye.png" alt="skye" draggable="true">
+                    <img src="./src/images/sova.png" alt="sova" draggable="true">
+                    <img src="./src/images/viper.png" alt="viper" draggable="true">
+                    <img src="./src/images/yoru.png" alt="yoru" draggable="true">
+                </div>
+            </div>
+        </div>
+        <div class="part-2">
+            <div class="dropper-container" id="dropper" style="position: relative;">
+                <img class="t-shirt" src="./src/images/t-shirt_black.png" draggable="false" alt="t-shirt"
+                    id="tshirt-image">
+                <div class="name-on-shirt" id="nameOnShirt"></div>
+                <div id="image-name" class="image-name"></div>
+            </div>
+            <h2>Custom your T-shirt</h2>
+        </div>
+    </div>
+</body>
+
+</html>
